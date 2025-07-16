@@ -116,7 +116,7 @@ function ContactForm() {
                 isLoading ?
                 <span>Sending Message...</span>:
                 <span className="flex items-center gap-1">
-                  Send Message
+                  Send telegram Message
                   <TbMailForward size={20} />
                 </span>
               }
