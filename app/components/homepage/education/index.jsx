@@ -7,6 +7,9 @@ import AnimationLottie from "../../helper/animation-lottie";
 import GlowCard from "../../helper/glow-card";
 
 function Education() {
+  // Filter out the 3rd card (id === 3)
+  const filteredEducations = educations.filter(education => education.id !== 3);
+
   return (
     <div id="education" className="relative z-50 border-t my-12 lg:my-24 border-[#25213b]">
       <Image
@@ -43,7 +46,7 @@ function Education() {
           <div>
             <div className="flex flex-col gap-6">
               {
-                educations.map(education => (
+                filteredEducations.map(education => (
                   <GlowCard key={education.id} identifier={`education-${education.id}`}>
                     <div className="p-3 relative text-white">
                       <Image
@@ -63,7 +66,7 @@ function Education() {
                           <BsPersonWorkspace size={36} />
                         </div>
                         <div>
-                          <p className="text-base sm:text-xl mb-2 font-medium uppercase">
+                          <p className="text-sm sm:text-lg mb-2 font-medium uppercase">
                             {education.title}
                           </p>
                           <p className="text-sm sm:text-base">{education.institution}</p>
