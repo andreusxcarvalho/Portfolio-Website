@@ -67,6 +67,17 @@ function Experience() {
                           </p>
                         </div>
                       </div>
+                      {/* Details section */}
+                      <div className="mt-2 px-3 py-2 bg-[#18122b] rounded-md border border-[#25213b]">
+                        <p className="text-xs sm:text-sm text-gray-300">
+                          {/* Replace the text below with details for each experience.
+                              You can add a 'details' property to each experience object in your data file,
+                              or hardcode details here for now. */}
+                          {experience.details
+                            ? experience.details
+                            : "Details about this experience will go here. You can describe your responsibilities, achievements, or technologies used."}
+                        </p>
+                      </div>
                     </div>
                   </GlowCard>
                 ))
