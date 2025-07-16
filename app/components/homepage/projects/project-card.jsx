@@ -36,14 +36,14 @@ function ProjectCard({ project }) {
           </div>
 
           <div className="ml-4 lg:ml-8 mr-2">
-            <span className=" text-white">tools:</span>
+            <span className=" text-white">skills:</span>
             <span className="text-gray-400">{` ['`}</span>
             {
-              project.tools.map((tag, i) => (
+              project.skills.map((tag, i) => (
                 <React.Fragment key={i}>
                   <span className="text-amber-300">{tag}</span>
                   {
-                    project.tools?.length - 1 !== i &&
+                    project.skills?.length - 1 !== i &&
                     <span className="text-gray-400">{`', '`}</span>
                   }
                 </React.Fragment>
@@ -59,6 +59,17 @@ function ProjectCard({ project }) {
           <div className="ml-4 lg:ml-8 mr-2">
             <span className="text-white">Description:</span>
             <span className="text-cyan-400">{' ' + project.description}</span>
+            <span className="text-gray-400">,</span>
+          </div>
+          <div>
+            <span className="ml-4 lg:ml-8 mr-2 text-white">code:</span>
+            {project.code ? (
+              <span className="text-blue-400 underline break-all">
+                <a href={project.code} target="_blank" rel="noopener noreferrer">{project.code}</a>
+              </span>
+            ) : (
+              <span className="text-gray-400">null</span>
+            )}
             <span className="text-gray-400">,</span>
           </div>
           <div><span className="text-gray-400">{`};`}</span></div>
