@@ -1,7 +1,7 @@
 export const educations = [
   {
     id: 1,
-    title: "Computer Engineering & data analytics ",
+    title: "Computer Engineering & Data Analytics ",
     duration: "2023 - Present",
     institution: "National University of Singapore",
   },
